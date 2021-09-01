@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from 'Component/Common/Button';
 import { ReactComponent as PlusIcon } from 'Assets/icon/ic_plus.svg';
+import useInput from 'Hooks/useInput';
 const TodoInput: React.FC = () => {
+  const { content, handleChange, handleSubmit } = useInput();
   return (
     <TodoInputWrapper>
-      <StyledInput />
-      <AddButton>
+      <StyledInput value={content} onChange={handleChange} />
+      <AddButton onClick={handleSubmit}>
         <StyledPlusIcon />
       </AddButton>
     </TodoInputWrapper>
@@ -18,7 +20,6 @@ export default TodoInput;
 const TodoInputWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 0 20px;
   & > * {
     flex-grow: 1;
   }

@@ -3,18 +3,28 @@ import styled from 'styled-components';
 import { ReactComponent as CheckIcon } from 'Assets/icon/ic_check.svg';
 import { ReactComponent as DeleteIcon } from 'Assets/icon/ic_delete.svg';
 import Button from 'Component/Common/Button';
-const TodoItem: React.FC = () => {
+import { ITodo } from 'Store/types';
+import { useDispatch } from 'react-redux';
+import { deleteTodoFetch, postIsCheckFetch } from 'Store/todo';
+
+interface ITodoItemProps {
+  todoItem: ITodo;
+}
+
+const TodoItem: React.FC<ITodoItemProps> = ({ todoItem }) => {
+  const { id, content, isCheck } = todoItem;
+  const dispatch = useDispatch();
   return (
     <TodoItemWrapper>
       <SelectButtonWrapper>
-        <StyledSelectButton>
-          <StyledCheckIcon />
+        <StyledSelectButton onClick={() => dispatch(postIsCheckFetch(id))}>
+          {isCheck && <StyledCheckIcon />}
         </StyledSelectButton>
       </SelectButtonWrapper>
       <TodoItemContent>
-        <span>내용내용내용</span>
+        <span>{content}</span>
       </TodoItemContent>
-      <StyledDeleteButton>
+      <StyledDeleteButton onClick={() => dispatch(deleteTodoFetch(id))}>
         <StyledDeleteIcon />
       </StyledDeleteButton>
     </TodoItemWrapper>
