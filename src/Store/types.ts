@@ -1,8 +1,8 @@
 export interface ITodo {
-  id: string;
+  id: number;
   content: string;
   isCheck: boolean;
-  createAt: Date;
+  createdAt: string;
 }
 
 export type TodoList = ITodo[];
@@ -10,4 +10,10 @@ export type TodoList = ITodo[];
 export interface IResponseData {
   count: number;
   todoList: TodoList;
+}
+
+export interface ITodosState {
+  loading: boolean;
+  data: TodoList;
+  error: boolean;
 }
