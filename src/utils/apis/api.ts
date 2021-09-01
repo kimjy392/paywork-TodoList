@@ -1,5 +1,5 @@
 import data from 'Data/data.json';
-const baseUrl = 'http://dummy-server.io';
+import { IResponseData } from 'Store/types';
 
 type PostRequest = {
   content: string;
@@ -7,14 +7,13 @@ type PostRequest = {
 };
 
 const getTodoList = () => {
-  return new Promise((resolve) => {
+  return new Promise<IResponseData>((resolve) => {
     setTimeout(() => {
       resolve(data);
     }, 500);
   });
 };
 
-// {content : string}
 const createTodo = (requestBody: Partial<PostRequest>) => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -23,7 +22,6 @@ const createTodo = (requestBody: Partial<PostRequest>) => {
   });
 };
 
-// {content : string}
 const putTodo = (id: number, requestBody: Partial<PostRequest>) => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -31,25 +29,27 @@ const putTodo = (id: number, requestBody: Partial<PostRequest>) => {
         msg: 'Todo가 수정되었습니다.',
         content: requestBody.content,
       });
-    });
+    }, 500);
   });
 };
 
-// {isCehck : boolean}
-const putCheck = (id: number, requestBody: Partial<PostRequest>) => {
+const putCheck = (id: number) => {
   return new Promise((resolve) => {
-    resolve({
-      msg: 'check가 수정되었습니다.',
-    });
+    setTimeout(() => {
+      resolve({
+        msg: 'check가 수정되었습니다.',
+      });
+    }, 500);
   });
 };
 
-// {}
-const deleteTodo = (id: string) => {
+const deleteTodo = (id: number) => {
   return new Promise((resolve) => {
-    resolve({
-      msg: '삭제되었습니다.',
-    });
+    setTimeout(() => {
+      resolve({
+        msg: '삭제되었습니다.',
+      });
+    }, 500);
   });
 };
 
