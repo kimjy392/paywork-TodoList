@@ -12,5 +12,6 @@ export const Home: React.FC = () => {
 const Layout = styled.div`
   min-width: 350px;
   max-width: 700px;
+  padding: 20px;
   margin: auto;
 `;

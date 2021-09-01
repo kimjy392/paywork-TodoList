@@ -17,7 +17,3 @@ const Title = styled.h1`
   text-align: center;
   margin-bottom: 40px;
 `;
-
-const TodoHeaderWrapper = styled.div`
-  margin-bottom: 30px;
-`;
