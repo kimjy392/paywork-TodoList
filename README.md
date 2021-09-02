@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+<p align='middle'>
+  <a href='https://github.com/kimjy392/paywork-TodoList'>
+    <img src='https://paywork.io/images/logo-dark.png' width="300px;" alt="로고 이미지 예시" />
+  </a></p>
+<p align='middle'><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/kimjy392/paywork-TodoList?color=blueviolet">
+<h1 align='middle'><a href='https://paywork-todolist-k.netlify.app'>배포 링크</a></h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+## 📌 프로젝트 소개
 
-### `npm start`
+###  프리온보딩 코스 페이워크 기업 과제
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> ❕ **BlaBla구현하기**❗
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/52653720/131762244-e82f8499-f04a-4c95-9c11-43bbccc98977.png)
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+    <summary><STRONG>
+       📚 과제 요구사항 보기
+        </STRONG></summary>
+ <p>
+     - ts + react 웹사이트
+  </p>
+    <p>
+        - react-saga 이용하기</p>
+    <p>
+ - Todo CRUD
+    </p>
+    <p>
+ - function 단위로 주석 설명
+    </p>
+</details>
 
-### `npm run build`
+<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📑 구현 목록
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`Todolist 구현`
 
-### `npm run eject`
+- [x] Todo 생성
+- [x] Todo 삭제
+- [x] Todo 체크 토글
+- [x] Todolist 요청
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`redux-saga`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [x] redux-saga를 이용한 비동기 처리
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 👨‍💻 실행 방법
 
-## Learn More
+### 설치
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm install`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 실행
+
+`npm start`
